@@ -1,0 +1,215 @@
+/* Terminology Management Page Styles */
+/* Extends styles.css with terminology-specific components */
+
+/* Semantic Triangle Container */
+.triangle-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Semantic Triangle SVG Styles */
+.semantic-triangle {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Triangle text labels */
+.triangle-label {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    fill: #333333;
+}
+
+/* Responsive adjustments for triangle labels */
+@media (max-width: 767px) {
+    .triangle-label {
+        font-size: 14px;
+    }
+    
+    .semantic-triangle {
+        max-width: 100%;
+    }
+    
+    .triangle-container {
+        padding: 15px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .triangle-label {
+        font-size: 16px;
+    }
+    
+    .semantic-triangle {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .triangle-label {
+        font-size: 18px;
+    }
+    
+    .semantic-triangle {
+        max-width: 500px;
+    }
+}
+
+/* Print styles for semantic triangle */
+@media print {
+    .triangle-container {
+        page-break-inside: avoid;
+        padding: 10px 0;
+    }
+    
+    .semantic-triangle {
+        max-width: 400px;
+    }
+}
+
+/* Content Table */
+.content-table-wrapper {
+    margin: 20px 20px;
+    overflow-x: auto;
+}
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-table caption {
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.content-table thead th {
+    color: #333333;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid #1E669A;
+}
+
+.content-table tbody th {
+    color: #333333;
+    padding: 10px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table td {
+    padding: 10px 15px;
+    color: #333333;
+    text-align: left;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #1E669A;
+}
+
+.content-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 767px) {
+    .content-table thead th,
+    .content-table tbody th,
+    .content-table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Terminology Excerpt Styles */
+.terminology-excerpt {
+    background-color: #ffffff;
+    border: 1px solid #CCCCCC;
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.excerpt-content {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    text-align: left;
+}
+
+.excerpt-content p {
+    margin: 0;
+}
+
+/* Highlight styles */
+.highlight-yellow {
+    background-color: #FFEB3B;
+    padding: 2px 0px 2px 0px;
+}
+
+.highlight-pink {
+    background-color: #ef91c6;
+    color: #ffffff;
+    padding: 2px 0px 2px 0px;
+}
+
+.highlight-orange {
+    background-color: #ffb84d;
+    padding: 2px 0px 2px 0px;
+}
+
+/* Strikethrough text */
+.strikethrough {
+    text-decoration: line-through;
+    color: #000000;
+}
+
+/* Italic terminology in pink */
+.term-italic-red {
+    font-style: italic;
+    color: #FF0000;
+}
+.term-italic-red-strikethrough {
+    font-style: italic;
+    color: #FF0000;
+    text-decoration: line-through;
+    text-decoration-color: #000000;
+}
+
+/* Responsive adjustments for terminology excerpt */
+@media (max-width: 767px) {
+    .excerpt-content {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .terminology-excerpt {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .excerpt-content {
+        font-size: 15px;
+    }
+}
+
+@media print {
+    .terminology-excerpt {
+        page-break-inside: avoid;
+    }
+    
+    .highlight-yellow,
+    .highlight-pink
+    .highlight-orange {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

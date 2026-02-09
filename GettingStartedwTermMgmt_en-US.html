@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Getting Started with Terminology Management</title>
+    <meta name="description" content="Learn the fundamentals of terminology management for translation and localization, including the semantic triangle, corpus building, terminology extraction, and termbase design." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="term-mgmt-styles.css">
+    <link rel="alternate" hreflang="en-US" href="terminology-management.html" />
+    <link rel="alternate" hreflang="es-MX" href="gestión-terminología.html" />
+</head>
+
+<body>
+    <div class="language-picker">
+        <label for="language-select">Language:</label>
+        <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="en-US">English</option>
+            <option value="es-MX">Español</option>
+        </select>
+    </div>
+
+    <main id="main-content">
+
+    <h1>Getting Started with Terminology Management</h1>
+    <p>By Alaina Brandt</p>
+    <p><em>This article has been lightly adapted from the original that was first published in the <a href="https://www.ata-chronicle.online/featured/getting-started-with-terminology-management/" target="_blank" rel="noopener noreferrer nofollow">May/June 2021 edition of The Chronicle</a> by ATA.</em></p>
+
+    <p><strong>Terminology management requires a certain initial investment of time and resources that will not be immediately recovered. But don't let that deter you from incorporating this best practice into your localization efforts, and the sooner the better!</strong></p>
+
+    <p>Terminology management makes or breaks the success of globalization and localization efforts in terms of both budgets and sales. Identifying and standardizing terminology reduces the need for expensive queries management and rework on jobs. Terminology is also a crucial aspect of user experience design. Despite its strategic value, however, many are unaware that terminology is key to producing solid, well-performing products. And once they are aware, many don't know where to start.</p>
+
+    <p>If you find yourself needing a little help in this area as well, then read on for some guidelines for getting started with terminology management. You'll learn about key concepts, strategies for unpacking how the meaning of terms will be interpreted, and ways to write new terms to increase the likelihood that the audience will adopt the intended messaging.</p>
+
+    <h2>Important Theory to Terminology Work</h2>
+
+    <p>Theory is intimidating for some, but it doesn't have to be that way. Learning a few key concepts is a great way to get started in this highly sought-after specialization. It also enables practitioners to better sell terminology strategy in terms that key decision makers will understand (usually in terms of money). At the core of terminology management is an understanding of how people conceptualize objects and ideas and how that can be leveraged to influence audiences and lead them to take action.</p>
+
+    <p>To illustrate, let's turn to the semantic triangle, which explains how terminology impacts people's mental processes. (See Figure 1.) Each point of the triangle represents an aspect of how meaning is identified in language. In the left corner, we find “objects,” which, according to the International Organization for Standardization (ISO) standard ISO 704 Terminology Work—Principles and Methods<sup>1</sup>, are “anything perceived or conceived.” In the top corner, we find “concepts,” or, as defined by ISO 704, “mental representations of objects.” In the right corner, we find "designations," or the labels in language people use to represent the objects they perceive and abstract in their minds into concepts.</p>
+
+    <figure class="content-figure">
+    <div class="triangle-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" class="semantic-triangle" role="img" aria-labelledby="triangle-title">
+        <title id="triangle-title">Semantic Triangle</title>
+        <polygon points="250,50 450,400 50,400" fill="#1E669A" />
+        <text x="250" y="35" class="triangle-label triangle-label-top" text-anchor="middle" data-i18n="concept">Concept</text>
+        <text x="450" y="440" class="triangle-label triangle-label-right" text-anchor="middle" data-i18n="designation">Designation</text>
+        <text x="50" y="440" class="triangle-label triangle-label-left" text-anchor="middle" data-i18n="object">Object</text>
+        </svg>
+    </div>
+    <figcaption>Figure 1. The Semantic Triangle</figcaption>
+    </figure>
+
+    <p>The shared designations for objects used by communities of speakers are what makes human communication within societies possible. In English, for example, if we didn't all understand that the word “triangle” refers to a three-sided, three-cornered, one-dimensional shape, we certainly wouldn't be able to discuss abstract concepts such as the semantic triangle, much less carry out a basic conversation on shapes. That said, it's important to remember that just because communities of speakers use common language doesn't mean that those speakers share the exact same conceptualization of each object that's designated.</p>
+
+    <p>For instance, an often-considered example within terminology management is the conceptualization of a table. The traditional definition of a table that most people think of is a flat surface upon which humans eat and work. It's an object that stands on four legs. Yet, that definition is not accurate because sometimes tables have three legs, sometimes six, sometimes the flat surface isn't set upon legs at all but upon a pedestal, and sometimes the table doesn't touch the ground but is suspended from a ceiling. If asked to draw their conceptualization of a table, no two individual speakers of a language will draw the same one from the mental inventory of those they've encountered or imagined in their lives. This is significant because those outside the language services and localization professions assume that meaning is held within the designation, but words themselves are arbitrary and empty. Meaning truly is in the eye or brain of the beholder. As such, we need to be careful about assuming that everyone shares the same understanding of what constitutes an object, especially when the objects being referred to are abstract concepts like quality assurance in translation.</p>
+
+    <h2>How Terminology Influences Human Perception</h2>
+
+    <p>The ISO 704 standard is fundamental to terminology work. The standard undergoes regularly scheduled reviews, which is common practice for all ISO standards. This review process is doing exactly what standards are designed to do—spurring passionate discussion among participants from worldwide markets and a competition of ideas. These are great activities that push innovation forward. One piece of advice in ISO 704 that I've always particularly enjoyed is found in the discussion of objects:</p>
+
+    <p class="content-aside">"In the course of producing a terminology, philosophical discussions on whether an object actually exists in reality are unproductive and should be avoided. Attention should be focused on how one deals with objects for the purposes of communication."<sup>2</sup><br><em>ISO 704:2009 Objects</em></p>
+
+    <p>This advice may seem funny, but I can say from experience that when getting started with terminology work it can be easy to stray into metaphysical discussions about objects that—while enjoyable—may not necessarily push the terminology work forward. Advice I would make explicit from the above is that terminology work is at the forefront of the evolution of human language. That said, the politics behind language must also be acknowledged when conducting terminology work. In certain cases, you'll want to be prescriptive about terminology use. Prescribing the words speakers should use, rather than describing the words commonly used by speakers, is a strategy used when establishing company slogans, branding, and product names. In other instances, just because a term isn't acknowledged doesn't mean that the associated concept doesn't exist, though the results of that lack of acknowledgement often include inequality and discrimination.</p>
+
+    <p>Gender is a great example of the use of prescriptive and descriptive language in the 21st century. Legal recognition of non-binary gender identity is increasing around the world, including in Argentina in 2012, in Germany, Taiwan, and in U.S. states like California. ATA member Ártemis López, who has been translating and interpreting for queer, trans, and non-binary communities since 2011, addresses this topic in the article "You, Me, Hir, and Non-Binary Language," published in <em>Intercambios</em>, the newsletter of ATA's Spanish Language Division.<sup>3</sup> López notes that the translation and interpreting industry will certainly need to learn how to respond to the natural shifts in language taking place as people become legally required to use language that promotes inclusivity and as societies become increasingly less accepting of the use of language to exclude and deny people's existence. (Note: Language practitioners will need to keep up to date with the terminology to accurately handle assignments involving civil status documents.)</p>
+
+    <p>Just as women won the right to officially have their marital status disassociated from their form of address with the addition of Ms. to Mrs. and Mr. in English vocabulary, the fight for progress in the terminology surrounding identity has resulted in language that serves the function of describing rather than prescribing people's gender identities. (See Table 1.)</p>
+
+    <figure class="content-figure">
+    <div class="content-table-wrapper">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Prescriptive</th>
+                    <th scope="col">Descriptive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Gender identities</th>
+                    <td>Male, Female</td>
+                    <td>Non-binary, Female, Male</td>
+                </tr>
+                <tr>
+                    <th scope="row">Honorifics</th>
+                    <td>Mr., Mrs., Ms.</td>
+                    <td>Mx., Ms., Mrs., Mr.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <figcaption>Table 1. Gender Identities: Prescriptive versus Descriptive</figcaption>
+    </figure>
+
+    <h2>How Terminology Leads to Action</h2>
+
+    <p>Now that we've covered some important definitions, let's re-examine the semantic triangle to better understand how terminology leads to action. By turning the semantic triangle on its side, we can see how the relationships among objects, concepts, and designations help achieve the desired result.</p>
+
+    <p>Using the illustration provided in Figure 2, we'll work with the concept of "coffee to go," represented by coffee beans and Styrofoam cups. Now let's think about the idea of "coffee to go" in reverse order. In other words, not as something that someone sees and then attaches a concept and a label to, but as something that someone thinks about without having to see the related object.</p>
+
+    <p>Here's the scenario: You're out running errands after the children kept you up late. You think, "I need to get a few more things done today, but I could really use a bit of a pick-me-up. I need to keep moving and a coffee to go would sure help."</p>
+
+    <figure class="content-figure">
+        <img src="MakingMeaning_Starbucks_en-US.png" alt="Semiotic triangle illustration showing a green to-go coffee cup (Object), a cartoon head with brain representing the mental idea (Concept: Coffee to go), and the spoken phrase Let&apos;s go get a Starbucks (Designation), demonstrating how objects, concepts, and language connect to create meaning.">
+        <figcaption>Figure 2. Terminology to Action</figcaption>
+    </figure>
+
+    <p>When I think of coffee to go, I think about Starbucks, and I'm sure I'm not the only one. For me, the idea of "coffee to go" is mapped onto the term "Starbucks," where Starbucks may be shifting in its lexical function. This shift is also referred to as a lexicalization.</p>
+
+    <p>"Just like new things are constantly invented, so are new words. The process of inventing a completely new word is referred to as coinage, and the same term is applied to the result of that process. Coinages often enter the language as trade names for commercial products, and over time they become general words referring to any version or variation of the original product. Examples of coinages that are used as terms: aspirin, nylon, kleenex, teflon, xerox; to google, to photoshop."<sup>4</sup></p>
+
+    <p>Although the brand name Starbucks is not a fully lexicalized term, it illustrates how the company has, through brand recognition, conveniently made me and many others around the world associate the concept of "coffee to go" with the designation Starbucks. This results in many Starbucks products in the hands of customers and many millions of dollars in sales. That's powerful.</p>
+
+    <p><em>Note: I actually don't drink much Starbucks anymore. My associations with the brand grew negative as I gained awareness of their union busting practices.</em></p>
+
+    <h2>Establishing Specifications for Terminology Workflows</h2>
+
+    <p>To establish terminology workflows that drive results, the key is customization. Still, certain aspects of your workflow will always be the same, like the need to define the specifications for your project. Here are some steps to help in this process. (See Table 2.) </p>
+
+<figure class="content-figure">
+    <div class="content-table-wrapper">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th scope="col">Workflow Phase</th>
+                    <th scope="col">Key Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Specification</th>
+                    <td>Subject Matter, Languages &amp; Audience, Purpose</td>
+                </tr>
+                <tr>
+                    <th scope="row">Corpus Building</th>
+                    <td>Representative texts from SMEs</td>
+                </tr>
+                <tr>
+                    <th scope="row">Term Extraction</th>
+                    <td>Human or Machine, Validation, Concept Mapping</td>
+                </tr>
+                <tr>
+                    <th scope="row">Termbase Documentation</th>
+                    <td>Concept Level, Language Level, Term Level</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dissemination</th>
+                    <td>Monitor, Update</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <figcaption>Table 2. Terminology Workflow</figcaption>
+    </figure>
+
+    <p><strong>Step 1.</strong> Define the subject field. The subject field (or subject area, domain, vertical, or whatever you choose to call it) will always need to be defined. For example, the letters ICE stand for very different things by simply changing the domain from engineering (internal combustion engine) to immigration (U.S. Immigration and Customs Enforcement). Associations with the word impact perception. Thinking of ice cubes in a refreshing soda certainly has a different effect than if "ice" makes you think of the polar ice caps melting.</p>
+
+    <p><strong>Step 2.</strong> Define the languages and audience. The audience and languages also need to be defined. This may seem obvious, but if we're preparing terminology for a project intended for an American audience, it will make a big difference if the label "American" is used to refer to someone from the Americas or to someone from the U.S.</p>
+
+    <p>For example, <em>estadounidenses</em> (Americans) might seem like a specific enough label to use in marketing terminology geared toward a Spanish-speaking audience, but we also need to be aware that both Mexico and the U.S. consist of united states. Once we consider this, we realize that the label <em>estadounidenses</em> is not specific enough. Choosing English as the only target language for a project for an "American" audience is inaccurate. For starters, Spanish is an important American dialect for the U.S., but so are the hundreds of other languages spoken in this country. The important takeaway is that no matter the language chosen, individual Americans are more likely to purchase products geared specifically to them (i.e., marketed using familiar language they use every day at work and at home).</p>
+
+    <p><strong>Step 3.</strong> Define the purpose of the project. Different strategies will be followed depending on whether the terminology is being collected for a specific subject field (e.g., technical terminology that a community of specialists use to communicate with one another about their craft) or a specific company. If the purpose of the project is not defined, unhappy results are more likely.</p>
+
+    <h2>Build a Representative Universe of Texts</h2>
+
+    <p>Once specifications have been established, corpora of technical texts within a specific domain are collected. It's important that these texts are written by subject matter experts (SMEs) who are native speakers of each of the project languages.</p>
+
+    <p>When identifying texts written by "native" speakers, a major challenge and source of bias is the use of stereotypical identification methods that too narrowly define who gets to be considered "native." For instance, a person with the last name Smith may or may not speak English as a native language. They may also speak Spanish as a native language, or any other language spoken on the planet. Assuming who a native speaker is based on superficial data like people's names does not and should not suffice for professional terminology work.</p>
+
+    <p>Here are some tips to achieve well-formed corpora free of bias:</p>
+
+    <p><strong>Concentrate on the volume of words.</strong> To substantiate whether a term is indeed part of the special language used by a community of SMEs, a wide variety of texts is needed. Terminologists should look for an unbiased sample of texts, size being one indication of this. According to Khurshid Ahmad, professor of computer science at Trinity College Dublin, and Margaret Rogers, professor of translation and terminology studies and director of the Centre for Translation Studies at the University of Surrey, empirical studies suggest that the vocabulary used in special-language texts is much smaller than the vocabulary in general-language texts. Therefore, starting off with a small corpus in a technical field is a good way to avoid bias.<sup>5</sup></p>
+
+    <p><strong>Make sure the texts included are not translations.</strong> Why is it important not to include translations in your corpora? According to Mona Baker, emeritus professor of translation and intercultural studies and modern languages and cultures at the University of Manchester, universal characteristics of translation include the tendency to lean toward explicit communication, simplified language, and a safe middle between covert and overt translation.<sup>6</sup> These characteristics mean that translations do not replicate the way SMEs communicate together in a single language and are therefore not good candidates for corpora intended to produce technical terminology. (When producing client-specific terminology based upon past translations, however, a successful project is not possible unless past translations are consulted.)</p>
+
+    <p><strong>Include many authors, and make sure those authors are SMEs writing for other SMEs.</strong> Why is this important? Well, if Microsoft documents are the only documents included in a corpus intended to produce IT terminology, the term extraction results will be biased toward Microsoft jargon rather than producing the shared special language used by IT professionals no matter their company affiliation. Additionally, SMEs employ simplified language in texts in which they explain their trade to lay people. When SMEs address other SMEs, they use the special language of their trade naturally, so corpora should be filled with documents produced with this audience in mind to more accurately produce the technical terminology of a trade.</p>
+
+    <h2>Terminology Extraction: Human Validation Required</h2>
+
+    <p>Terminology extraction is more successfully conducted when one can critically engage with the types of challenges being navigated, which machines cannot do at this point. To understand these challenges, we'll start by looking at how extraction is carried out by a machine.</p>
+
+    <p>During machine extraction, the large batch of words in the corpus is analyzed for groups of words that follow the patterns of how terms are normally expressed in that language. Most terms are nouns. Those nouns are single words or compounds. So, when teaching a machine to carry out extraction for English, the machine would be taught to identify frequent occurrences of single words or compounds that follow these patterns (among others): noun + noun; noun + noun + noun; noun + of + noun, etc.</p>
+
+    <p>Despite claims about the ability of artificial intelligence to replicate and even replace humans, it's important to keep in mind that automatic extraction results are currently far from a point at which they can be used without human validation. For languages in which the patterns used to construct terms are well identified and have been taught successfully to machines, automatic extraction produces many collocations, or groupings of words that frequently appear in a corpus but are not actually terms. Figure 3 shows the results from a very small corpus of computer-assisted translation (CAT)-related documentation. The results include a number of invalidated terms, including "the same" and "number of" among additional collocations. As you can tell, the configuration that produced the extraction results has simply not yet been refined by a qualified human to produce higher quality results.</p>
+
+    <figure class="content-figure wide">
+        <img src="TermExtraction-Eng-SketchEngine.png" alt="Unvalidated Terminology Extraction in English by Sketch Engine">
+        <figcaption>Figure 3. Unvalidated Terminology Extraction in English by Sketch Engine</figcaption>
+    </figure>
+
+    <p>Out-of-the-box term extractors are currently not widely available in all languages. Anecdotally, I've observed poorer results from automatic extractions for languages like Korean and Thai, if extraction is available at all. On the bright side, plenty of invigorating linguistic analysis still needs to be done and then taught to the machines to reach greater levels of automation, and that will keep specialists working far into the future.</p>
+
+    <p>On small projects, or when carrying out term extraction for the first time, a great way to get started is by manually eliminating any words from your primary content that you know for sure are not special terms. This will help you develop "stop lists," which you can use to teach your term extraction tool to automatically filter these words out from your results. A resource like this is obviously one with great potential for robust growth over time.</p>
+
+    <p>Figure 6 below shows an example of a selection of text within the domain of localization and the sub-domain of CAT technology that has undergone this process. Repetitions are highlighted using various colors. Synonyms appear in orange (one pair), and potential terms that were discarded are crossed out in red.</p>
+
+    <p>This selection of text produces the following list of terms. All terms in the list are presented in singular form and lowercase (unless the term is a proper noun), in keeping with terminological best practices. The relationships and hierarchy among the terms are indicated with bullets.</p>
+
+    <ul>
+    <li>segment (7)</li>
+    <li>translation memory (4)</li>
+    <li>match (noun) (5)
+        <ul>
+        <li>100% match—type of match
+            <ul>
+            <li>repetition (1)—type of 100% match</li>
+            <li>in-context match (1)—type of 100% match; prevent variation (i.e., "in context match" and "in-context match")</li>
+            <li>context keys match (1)—type of "in-context match"</li>
+            </ul>
+        </li>
+        <li>"fuzzy match" or "75% match"—synonyms
+            <ul>
+            <li>new word (1)—per Memsource, type of fuzzy match</li>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    </ul>
+
+    <p>The list above contains compound nouns, a major challenge in terminology work. According to the Simplified Technical English specifications of the AeroSpace and Defense Industries Association of Europe, compound nouns longer than three words should generally be avoided. This is because they impede understanding as readers have to pause to unpack the modifications taking place.<sup>7</sup> In this case, it will be fairly clear to specialists that the five-word compound phrase in the text actually consists of at least two compound nouns: "translation memory" + "net rate scheme." Then again, it could also consist of three nouns: "translation memory" + "net rate" + "scheme," where "scheme" is modified by both the terms "translation memory" and "net rate." This identification is not something that's easy for a machine to get right. Someone who isn't qualified might also misinterpret this grouping or translate it inconsistently throughout a document, which will result in costly rework in later stages of production.</p>
+
+    <figure class="content-figure terminology-excerpt">
+    <div class="excerpt-content">
+        <p>"<span class="highlight-yellow">Translation memory</span> <span class="term-italic-red">net rate scheme</span><span class="strikethrough">s have four categories: </span><span class="term-italic-red">Repetition</span><span class="strikethrough">: A </span><span class="highlight-pink">segment</span><span class="strikethrough"> repeated in a</span> <span class="term-italic-red">document</span><span class="strikethrough">; </span><span class="term-italic-red">In-context match</span><span class="strikethrough">: A </span><span class="highlight-pink">segment</span><span class="strikethrough"> which matches a </span><span class="highlight-pink">segment</span><span class="strikethrough"> already stored in the </span><span class="highlight-yellow">translation memory</span><span class="strikethrough">, including its </span><span class="term-italic-red">context</span><span class="strikethrough">, the preceding and following </span><span class="highlight-pink">segment</span><span class="strikethrough">s or a </span><span class="term-italic-red">context keys match</span><span class="strikethrough">; </span><span class="term-italic-red">100% match</span><span class="strikethrough">: A </span><span class="highlight-pink">segment</span><span class="strikethrough"> which </span><span class="term-italic-red-strikethrough">match</span><span class="strikethrough">es a </span><span class="highlight-pink">segment</span><span class="strikethrough"> already stored in the </span><span class="highlight-yellow">translation memory</span><span class="strikethrough">; </span><span class="highlight-orange">Fuzzy match</span><span class="strikethrough">: A </span><span class="highlight-pink">segment</span><span class="strikethrough"> which partially </span><span class="term-italic-red-strikethrough">match</span><span class="strikethrough">es a </span><span class="highlight-pink">segment</span><span class="strikethrough"> already stored in the</span> <span class="highlight-yellow">translation memory</span><span class="strikethrough">; </span><span class="highlight-orange">Fuzzy match</span><span class="strikethrough">es can range from 99% down to zero. </span><span class="highlight-orange">Fuzzy match</span><span class="strikethrough">es below a </span><span class="term-italic-red">75% match</span><span class="strikethrough"> rate are considered </span><span class="term-italic-red">new word</span><span class="strikethrough">s and are newly translated.</span>"</p>
+    </div>
+        <figcaption>Figure 6. "Net Rate Schemes" by Memsource</figcaption>
+    </figure>
+
+    <p>Determining whether terms refer to unique concepts or are synonyms for other terms is another challenge within terminology work, especially because each language tolerates linguistic variation differently (one of many unconscious language preferences associated with languages). As those of us in the industry are aware, both "fuzzy match" and "75% match" can refer to the same concept (with 75% match being a type of a fuzzy match). Unqualified humans and machines can very easily misinterpret this and translate each of these terms using words from their language that refer to entirely different concepts for each term in the pair. If different translators don't correctly understand the relationship between these terms, inconsistencies in meaning will be introduced in the target content that will ultimately impede user understanding.</p>
+
+    <p>When compiling terminology from client content, capture these important term types first to prevent downstream issues and the cost that results from unplanned rework:</p>
+
+    <ul class="content-list">
+        <li>Key technical terms and any synonyms for those terms</li>
+        <li>Abbreviations and acronyms</li>
+        <li>Neologisms, such as product names or features</li>
+        <li>Ambiguous words, including homonyms</li>
+        <li>Inconsistent terms (check for and standardize the preferred spelling variation)</li>
+        <li>Company names, slogans, and trademarks</li>
+    </ul>
+
+    <p>While the process of finding equivalents for terminology in one language is referred to above as translation, it's important to note that terminology work is an entirely different linguistic process. For terminology work conducted under ideal circumstances, the process of building corpora, extracting terminology, and understanding concept relations would be carried out independently in each language to prevent the structure of any one language from dominating the structure of meaning conceptualization. In the real world, tight deadlines and limited budgets mean that terminology work is often treated more as a process of translation, with English as the lingua franca source language within the technical fields.</p>
+
+    <p>To ensure that concepts are adopted, borrowing from languages like English when introducing new technologies in developing markets allows for linguistic voids to be filled quickly. Still, the adoption of terminology over time may not be as successful as it would be if terminology were formed according to the structures of the "target" language. Note that terminology work should also start long before localization efforts are underway.</p>
+
+    <h2>Compiling Terminology into Databases</h2>
+
+    <p>When starting to compile collected terminology into databases, a frequent source of rework is the incorrect fusion of terminology work with what lay people sometimes refer to as "dictionary work." This is also known within specialized communities as lexicography. Lexicography is the practice of compiling all the known concepts included among the meanings of a word into a single entry. Terminology works in the opposite direction. Terminography is the practice of compiling all the words used to denote a single concept in a single entry. For example, in lexicography, the following concepts would be collected in the entry for <em>key (n.)</em>: key for a lock, piano key, key of music, etc. In terminography, the following synonyms would be collected in the concept entry for <em>encryption key (n.)</em>: key, cypher, code. In terminography, the concept (not word) entry collects all the different words (terms) used to name that concept.</p>
+
+    <p>The information associated with term entries in terminological databases is organized according to a hierarchy with three information levels: entry (or concept) level, language level, and term level.</p>
+
+    <ul class="content-list">
+        <li>The entry level contains the information that applies to the entire entry regardless of language. (Remember, we're working with a single concept in each terminology record.) The subject field is a good example of the type of data stored at the entry level. Since every term in the entry refers to the same concept or meaning, the subject field applies to every term. We store that information once at the entry level, rather than repeating it in lower levels of the hierarchy.</li>
+        <li>The language level contains information that only applies to a specific language. Each term entry may have records in any number of languages. The area for each language is sometimes called a "language block." A definition in the specific language is a good thing to store at this level.</li>
+        <li>The term level contains the information that applies only to that specific term. A language block may contain many term blocks, but at least one term block for the head term plus as many blocks as needed for any synonyms. At this level we collect information like the gender and number of the term in question for Romance languages.</li>
+    </ul>
+
+    <p>Here's an example of what this hierarchy might look like:</p>
+
+        <ul>
+        <li>Concept 1—&lt;subject field&gt;
+            <ul>
+            <li>Language—definition
+                <ul>
+                <li>Term—gender, number</li>
+                <li>Term</li>
+                </ul>
+            </li>
+            <li>Language
+                <ul>
+                <li>Term</li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        
+        <li>Concept 2—&lt;subject field&gt;
+            <ul>
+            <li>Language
+                <ul>
+                <li>Term—full form</li>
+                <li>Term—short form</li>
+                <li>Term—deprecated—do not use</li>
+                </ul>
+            </li>
+            <li>Language
+                <ul>
+                <li>Term</li>
+                <li>Term</li>
+                <li>Term</li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        
+        <li>Concept 3—&lt;subject field&gt;
+            <ul>
+            <li>Language
+                <ul>
+                <li>Term</li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        </ul>
+        <em>Termbase hierarchy: concept level, language level, and term level</em>
+
+    <p>This hierarchy warrants emphasis given the impact that the proper hierarchical setup can have on the scalability of individual terminology resources and overarching terminology campaigns. When the information in the database follows this structure, with data points captured at the appropriate level and in conformance with the ISO 30042 Termbase Exchange standard<sup>8</sup>, your termbase will more easily transfer among CAT tools. This means you'll be able to make your resource more robust over time. Your terminology journey will likely start with some sort of an Excel database. Once you're ready to start building custom termbases within CAT tools, look for products that have incorporated the ISO 30042 standard, such as Wordbee.</p>
+
+    <h2>Terminology Management: Dispelling Common Misconceptions</h2>
+
+    <p>Ultimately, terminology management is about education. It's true that the practice requires a certain initial investment of time and resources that will not be immediately recovered. But don't let that deter you from incorporating this best practice into your localization efforts, and the sooner the better. Start small and polish your terminological processes and databases until you're confident that the structures produce the intended results. Then build out robust resources over time.</p>
+
+    <p>To conclude, consider this final example: the car name Chevy Nova. "Nova" is a term that can either leave you seeing stars or snickering about a car that "doesn't go." (The words "No va" translate to "[It] doesn't go" in Spanish, so it's an unfortunate name for a car.) So, make sure your worldwide product and language service launches are Go's instead of No go's. Be sure to incorporate terminology management in your localization workflows.</p>
+
+    <h2>Notes</h2>
+
+    <ol class="content-list">
+        <li>ISO 704:2009—Terminology Work—Principles and Methods (International Organization for Standardization), <a href="http://bit.ly/ISO704" target="_blank" rel="noopener noreferrer">http://bit.ly/ISO704</a>.</li>
+        <li>ISO 704:2009 (Objects), 2.</li>
+        <li>López, Ártemis. "You, Me, Hir, and Non-Binary Language," <em>Intercambios</em> (ATA Spanish Language Division, October 2020), <a href="http://bit.ly/Intercambios-%C3%81rtemis" target="_blank" rel="noreferrer noopener">http://bit.ly/Intercambios-Ártemis</a>.</li>
+        <li>Jedlicka, Daniel. <em>Odborná terminologie 1, Section 2.3.7 Coinage</em> (European Union, 2019), <a href="https://bit.ly/Jedlicka-Coinage" target="_blank" rel="noreferrer noopener">https://bit.ly/Jedlicka-Coinage</a>.</li>
+        <li>Ahmad, Khurshid, and Margaret Rogers. "Corpus Linguistics and Terminology Extraction." In <em>Handbook of Terminology Management</em> (John Benjamins, 2001), <a href="http://bit.ly/Khurshid-Rogers-terms" target="_blank" rel="noreferrer noopener">http://bit.ly/Khurshid-Rogers-terms</a>, 725–760.</li>
+        <li>Baker, Mona. "Corpus-Based Translation Studies: The Challenges That Lie Ahead." In <em>Terminology, LSP, and Translation</em> (John Benjamins, 1996), <a href="http://bit.ly/Baker-corpus" target="_blank" rel="noreferrer noopener">http://bit.ly/Baker-corpus</a>.</li>
+        <li><em>Simplified Technical English, Issue 7</em> (Aerospace and Defense Industries Association of Europe, 2017), <a href="http://bit.ly/simplified-technical-English" target="_blank" rel="noreferrer noopener">http://bit.ly/simplified-technical-English</a>.</li>
+        <li>ISO 30042:2019. Management of Terminology Resources—TermBase eXchange (International Organization for Standardization), <a href="http://bit.ly/ISO30042" target="_blank" rel="noreferrer noopener">http://bit.ly/ISO30042</a>.</li>
+    </ol>
+
+    <h2>Additional Resources</h2>
+
+    <p>Karsch, Barbara, Petra Drewer, Donatella Pulitano, and Klaus-Dirk Schmitz. <em>Terminology Work Best Practices 2.0. Deutscher Terminologie-Tag e.V.</em> (Köln, 2020).</p>
+
+    <p>Introduction to TermBase eXchange (TBX), <a href="http://www.tbxinfo.net/" target="_blank" rel="noreferrer noopener">www.tbxinfo.net</a>.</p>
+
+    <p>Translation Commons, <a href="https://translationcommons.org/" target="_blank" rel="noreferrer noopener">https://translationcommons.org</a>. If you want to learn more about terminology management, take the "Introduction to Terminology Google Classroom" course by Translation Commons. Access the course for free by registering on Translation Commons and visiting the Learning Center.</p>
+
+    <p>Wright, Sue Ellen. "TBX Dialects: Making eXchange Work for You." In <em>The Routledge Handbook of Translation and Technology</em> (Routledge, 2018), <a href="http://bit.ly/Wright-TBX" target="_blank" rel="noreferrer noopener">http://bit.ly/Wright-TBX</a>.</p>
+
+    </main>
+
+    <script src="language-utils.js"></script>
+    <script src="language-switcher.js"></script>
+</body>
+</html>
