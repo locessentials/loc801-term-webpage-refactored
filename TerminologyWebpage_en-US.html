@@ -155,9 +155,14 @@
         </form>
     </div>
 
+    <!-- LOC NOTE: Scripts must be loaded in this specific order:
+         1. language-utils.js - Provides shared language detection and string loading functions
+         2. language-switcher.js - Depends on language-utils.js for getCurrentLanguage()
+         3. terminology-quiz.js - Depends on language-utils.js for getCurrentLanguage() and loadLanguageStrings()
+    -->
+    <script src="language-utils.js"></script>
     <script src="language-switcher.js"></script>
-    <script src="terminology-quiz_en-US.js"></script>
-    <!-- LOC NOTE: A locale-specific JS files (e.g., terminology-quiz_es-MX.js) is needed -->
-    <!-- LOC NOTE: Quiz feedback messages in JavaScript file will need translation -->
+    <script src="terminology-quiz.js"></script>
+    <!-- LOC NOTE: Each language version needs corresponding JSON files (strings_en-US.json, strings_es-MX.json) -->
 </body>
 </html>

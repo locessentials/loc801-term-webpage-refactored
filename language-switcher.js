@@ -1,47 +1,22 @@
 // language-switcher.js
-// Dynamically handles language switching without hardcoded filenames
+// Handles language switching functionality with externalized strings
+// Depends on: language-utils.js
 
-const errorMessages = {
-    'en-US': {
-        languageUnavailable: 'Language selection is currently unavailable. Please try refreshing the page.',
-        languageNotSupported: 'This language is not supported.',
-        switchError: 'Unable to switch languages. Please try again.'
-    },
-    'es-MX': {
-        languageUnavailable: 'La selección de idioma no está disponible actualmente. Por favor, actualice la página.',
-        languageNotSupported: 'Este idioma no es compatible.',
-        switchError: 'No se puede cambiar de idioma. Por favor, inténtelo de nuevo.'
-    }
-};
+let switcherStrings = null;
 
-function getCurrentLanguage() {
-    const currentPath = window.location.pathname;
-    const filename = currentPath.split('/').pop();
-    
-    // Detect language from filename pattern
-    if (filename.includes('_es-MX') || filename.includes('_es')) {
-        return 'es-MX';
-    }
-    return 'en-US';
-}
-
-function getOtherLanguageFile() {
-    const currentPath = window.location.pathname;
-    const filename = currentPath.split('/').pop();
-    const currentLang = getCurrentLanguage();
-    
-    // Switch between languages by replacing language code in filename
-    if (currentLang === 'en-US') {
-        return filename.replace('_en-US', '_es-MX').replace('_en', '_es-MX');
-    } else {
-        return filename.replace('_es-MX', '_en-US').replace('_es', '_en-US');
-    }
-}
-
+/**
+ * Changes the page language by navigating to the other language version
+ * @param {string} targetLanguage - The target language code
+ */
 function changeLanguage(targetLanguage) {
     const languageSelect = document.getElementById('language-select');
     const errorContainer = document.getElementById('language-error');
     const currentLanguage = getCurrentLanguage();
+    
+    if (!switcherStrings) {
+        console.error('Language strings not loaded');
+        return;
+    }
     
     try {
         // Don't do anything if already on target language
@@ -56,7 +31,11 @@ function changeLanguage(targetLanguage) {
         announcement.setAttribute('role', 'status');
         announcement.setAttribute('aria-live', 'polite');
         announcement.className = 'sr-only';
-        announcement.textContent = `Changing language to ${targetLanguage === 'en-US' ? 'English' : 'Spanish'}`;
+        
+        const langName = targetLanguage === 'en-US' 
+            ? switcherStrings.accessibility.english 
+            : switcherStrings.accessibility.spanish;
+        announcement.textContent = `${switcherStrings.accessibility.changingLanguage} ${langName}`;
         document.body.appendChild(announcement);
         
         // Navigate to the other language version
@@ -67,7 +46,7 @@ function changeLanguage(targetLanguage) {
         
         // Display error message
         if (errorContainer) {
-            errorContainer.textContent = errorMessages[currentLanguage].switchError;
+            errorContainer.textContent = switcherStrings.errorMessages.switchError;
             errorContainer.setAttribute('role', 'alert');
             errorContainer.style.display = 'block';
         }
@@ -79,24 +58,38 @@ function changeLanguage(targetLanguage) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+/**
+ * Initializes the language switcher on page load
+ */
+async function initializeLanguageSwitcher() {
     const languageSelect = document.getElementById('language-select');
     const currentLanguage = getCurrentLanguage();
     
-    if (!languageSelect) {
-        console.error('Language select element not found');
-        return;
-    }
+    try {
+        // Load language strings
+        const allStrings = await loadLanguageStrings(currentLanguage);
+        switcherStrings = allStrings.languageSwitcher;
+        
+        if (!languageSelect) {
+            console.error('Language select element not found');
+            return;
+        }
 
-    // Set initial language based on current page
-    languageSelect.value = currentLanguage;
-    
-    // Add ARIA labels for accessibility
-    const ariaLabel = currentLanguage === 'es-MX' ? 'Seleccionar idioma' : 'Select language';
-    languageSelect.setAttribute('aria-label', ariaLabel);
-    
-    // Update the onchange handler
-    languageSelect.onchange = function() {
-        changeLanguage(this.value);
-    };
-});
+        // Set initial language based on current page
+        languageSelect.value = currentLanguage;
+        
+        // Add ARIA label for accessibility
+        languageSelect.setAttribute('aria-label', switcherStrings.accessibility.ariaLabel);
+        
+        // Set up the onchange handler
+        languageSelect.onchange = function() {
+            changeLanguage(this.value);
+        };
+        
+    } catch (error) {
+        console.error('Failed to initialize language switcher:', error);
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initializeLanguageSwitcher);

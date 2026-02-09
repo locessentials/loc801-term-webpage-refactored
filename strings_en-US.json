@@ -1,0 +1,55 @@
+{
+  "languageSwitcher": {
+    "errorMessages": {
+      "languageUnavailable": "Language selection is currently unavailable. Please try refreshing the page.",
+      "languageNotSupported": "This language is not supported.",
+      "switchError": "Unable to switch languages. Please try again."
+    },
+    "accessibility": {
+      "changingLanguage": "Changing language to",
+      "english": "English",
+      "spanish": "Spanish",
+      "ariaLabel": "Select language"
+    }
+  },
+  "quiz": {
+    "errorMessages": {
+      "formNotFound": "Quiz form not found",
+      "feedbackElementNotFound": "Feedback element for question {question} not found",
+      "radioButtonsNotFound": "Radio buttons for question {question} not found"
+    },
+    "quizError": {
+      "pleaseAnswer": "Please answer",
+      "question": "question",
+      "questions": "questions"
+    },
+    "accessibility": {
+      "scoreAnnouncement": "You got {correct} out of {total} questions correct",
+      "generalError": "An error occurred while processing your answers. Please refresh the page and try again."
+    },
+    "questions": {
+      "q1": {
+        "correct": "False",
+        "correctFeedback": "Correct! \"It’s important to remember that just because communities of speakers use common language doesn't mean that those speakers share the exact same conceptualization of each object that’s designated... If asked to draw their conceptualization of a table, no two individual speakers of a language will draw the same one from the mental inventory of those they’ve encountered or imagined in their lives. This is significant because those outside the language services and localization professions assume that meaning is held within the designation, but words themselves are arbitrary and empty. Meaning truly is in the eye or brain of the beholder.\" (Alaina Brandt, Getting Started with Terminology Management, The ATA Chronicle)",
+        "incorrectFeedback": {
+          "True": "Incorrect. “It’s important to remember that just because communities of speakers use common language doesn't mean that those speakers share the exact same conceptualization of each object that’s designated... If asked to draw their conceptualization of a table, no two individual speakers of a language will draw the same one from the mental inventory of those they’ve encountered or imagined in their lives. This is significant because those outside the language services and localization professions assume that meaning is held within the designation, but words themselves are arbitrary and empty. Meaning truly is in the eye or brain of the beholder.” (Alaina Brandt, Getting Started with Terminology Management, The ATA Chronicle)"
+        }
+      },
+      "q2": {
+        "correct": "use in a specific subject field",
+        "correctFeedback": "Correct! Special language is a natural language used in a subject field and characterized by the use of specific means of expression. (ISO 1087)",
+        "incorrectFeedback": {
+          "independent of any specific subject field": "Incorrect. Special language is a natural language used in a subject field and characterized by the use of specific means of expression. (ISO 1087)"
+        }
+      },
+      "q3": {
+        "correct": "rendering of ideas",
+        "correctFeedback": "Correct!",
+        "incorrectFeedback": {
+          "written content": "Incorrect. A shared characteristic of translation and interpreting is that both are a rendering of ideas expressed in one language into another language.",
+          "verbal content": "Incorrect. A shared characteristic of translation and interpreting is that both are a rendering of ideas expressed in one language into another language."
+        }
+      }
+    }
+  }
+}
